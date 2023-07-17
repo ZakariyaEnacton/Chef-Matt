@@ -74,8 +74,9 @@ img .logo {
   height: 100%;
   display: flex;
   flex-direction: column;
-  border-right: 2px solid var(--clr-secondary-1);
+  border-right: 8px solid var(--clr-secondary-1);
   /* visibility: hidden; */
+  background: rgba(19, 15, 12, 0.8);
 }
 .sidebar-toggle {
   border-color: transparent;
@@ -83,16 +84,24 @@ img .logo {
   background: transparent;
   transition: all 0.3s linear;
   cursor: pointer;
-  padding: 38px 55px;
+  padding: 38px 0;
 }
 .sidebar-toggle img {
   width: 40px;
   height: 40px;
 }
-a {
-  max-width: 100%;
-  height: auto;
-  margin: auto;
+.sidebar-logo {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  position: absolute;
+  left: 24px;
 }
 
 .close-btn {
@@ -107,7 +116,7 @@ a {
   position: fixed;
   width: 345px;
   height: 900px;
-  visibility: hidden;
+  display: none;
 }
 .sidebar-header {
   display: flex;
@@ -124,4 +133,50 @@ a {
   height: 319px;
   margin-left: 150px;
   position: absolute;
+}
+
+.container {
+  max-width: 1282px;
+  width: 100%;
+  margin-left: auto;
+}
+
+.heading-wrapper {
+  position: relative;
+  margin-top: 129px;
+  margin-left: 65px;
+}
+
+.heading-wrapper::before {
+  content: "";
+  background: url(/images/image_1.png);
+  background-size: cover;
+  height: 319px;
+  width: 319px;
+  display: block;
+  position: absolute;
+  top: -223px;
+  left: -49px;
+  z-index: -1;
+}
+
+.heading {
+  max-width: 572px;
+  width: 100%;
+  border-bottom: 4px solid var(--clr-secondary-1);
+  color: #d29a5a;
+  font-family: Poppins;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.sub-heading {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }

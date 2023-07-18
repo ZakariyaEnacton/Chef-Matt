@@ -1,7 +1,7 @@
 window.onload = () => {
   var swiper = new Swiper(".product-slider", {
     slidesPerView: 4,
-    // spaceBetween: 5,
+    // spaceBetween: 10,
 
     navigation: {
       nextEl: ".swiper-button-next",

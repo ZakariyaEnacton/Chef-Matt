@@ -173,7 +173,7 @@ img .logo {
 }
 
 .sub-heading {
-  margin-top: 38px;
+  margin-top: 35px;
   color: #fff;
   font-family: var(--ff-primary);
   font-size: 18px;
@@ -181,10 +181,27 @@ img .logo {
   font-weight: 400;
   line-height: normal;
 }
-.swiper {
+
+.product-slider {
   margin-top: 80px;
+  width: 100%;
+  /* background-color: red; */
+  /* padding: 4px 0; */
+  /* width: calc(100%-20%);
+  height: calc(100vh-4rem); */
 }
 
+.swiper-slide > img {
+  width: 100%;
+}
+.swiper-button-next {
+  margin-top: 0;
+}
+.swiper-button-prev {
+  display: block;
+
+  left: 0;
+}
 .title {
   color: var(--clr-secondary-1);
   text-align: center;
@@ -283,10 +300,82 @@ img .logo {
 }
 
 /* promotion section */
-.container .promotion-section {
+.promotion-section .container {
   background: url("/images/img_8.png");
 }
 .promotion-section .heading-wrapper {
   padding-top: 100px;
+  margin-left: 65px;
   height: 400px;
+  color: var(--clr-white);
+}
+.promotion-section .heading {
+  color: var(--clr-white);
+  border-bottom: 4px solid var(--clr-white);
+}
+.promotion-form {
+  display: flex;
+}
+.input-field {
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.subscribe-btn {
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+  border: 1px solid #d29a5a;
+  background: #d29a5a;
+}
+/* footer section */
+.footer-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 75px;
+  padding-bottom: 70px;
+  border-bottom: 8px solid var(--clr-secondary-1);
+}
+.footer-content {
+  max-width: 370px;
+  display: flex;
+}
+
+.footer-content img {
+  width: 36px;
+  height: 36px;
+}
+.footer-content .content {
+  text-align: left;
+  margin-left: 22px;
+}
+
+.footer-title {
+  color: var(--clr-secondary-1);
+  font-family: var(--ff-primary);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.desc {
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.footer-nav {
+  max-width: 445px;
+  margin: 0 auto;
 }

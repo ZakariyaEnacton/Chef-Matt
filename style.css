@@ -255,20 +255,3 @@ img .logo {
 .testimonies-section {
   margin-top: 125px;
 }
-
-.testimonies-section .heading-wrapper {
-  position: relative;
-}
-
-.testimonies-section .heading-wrapper::before {
-  content: "";
-  background: url(/images/img_9.png);
-  background-size: cover;
-  height: 319px;
-  width: 319px;
-  display: block;
-  position: absolute;
-  top: -235px;
-  left: -49px;
-  z-index: -1;
-}

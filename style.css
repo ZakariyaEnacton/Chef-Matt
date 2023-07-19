@@ -493,3 +493,34 @@ a:active {
   max-width: 445px;
   margin: 0 auto;
 }
+
+/* product page styling */
+
+.page-container {
+  margin-left: 150px;
+  position: relative;
+}
+.page-banner-image {
+  background: url(/images/product_banner.png) lightgray 50% / cover no-repeat;
+  height: 440px;
+}
+.page-title {
+  position: absolute;
+  top: 35%;
+  left: 29%;
+  color: var(--clr-secondary-1);
+  text-align: center;
+  font-family: var(--ff-primary);
+  font-size: 4.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.title-border {
+  width: 572px;
+  height: 4px;
+  background: var(--clr-secondary-1);
+  position: relative;
+  margin: auto;
+  top: 255px;
+}

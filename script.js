@@ -1,3 +1,20 @@
+// variable
+const toggleBtn = document.querySelector(".sidebar-toggle");
+const sidebar = document.querySelector(".sidebar");
+const closeBtn = document.querySelector(".close-btn");
+const sidebarToggle = document.querySelector(".sidebar-center");
+
+// events
+toggleBtn.addEventListener("click", function () {
+  sidebarToggle.classList.add("hide-sidebar");
+  sidebar.classList.add("show-sidebar");
+});
+
+closeBtn.addEventListener("click", function () {
+  sidebar.classList.remove("show-sidebar");
+  sidebarToggle.classList.remove("hide-sidebar");
+});
+
 // swiper funcrions
 window.onload = () => {
   var swiper = new Swiper(".product-slider", {

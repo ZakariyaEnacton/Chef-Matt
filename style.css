@@ -196,6 +196,17 @@ a:active {
   font-size: 1.375rem;
   margin-left: 10px;
 }
+/* slider section */
+.slider-wrapper .swiper-wrapper {
+  height: 100vh;
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+}
+.slide {
+  background-image: url(/images/slider.png);
+  background-position: center center;
+  background-size: cover;
+}
 /* product section */
 .container {
   max-width: 1280px;

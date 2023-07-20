@@ -58,23 +58,12 @@ ul {
 a {
   text-decoration: none;
 }
-img:not(.logo) {
-  width: 100%;
-}
-/* img {
-  display: block;
-} */
-/* img .logo {
-  position: fixed;
-  top: 10;
-} */
+
 /* global classes */
 .sidebar-center {
   position: fixed;
   width: 150px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
   border-right: 8px solid var(--clr-secondary-1);
   background: rgba(19, 15, 12, 0.8);
   z-index: 2;
@@ -83,26 +72,38 @@ img:not(.logo) {
 .hide-sidebar {
   transform: translate(-100%);
 }
+.sidebar-image {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding-left: 12px;
+}
 .sidebar-toggle {
-  border-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
   color: white;
   background: transparent;
   transition: all 0.3s linear;
   cursor: pointer;
   padding: 38px 0;
+  width: 100%;
+  position: absolute;
 }
-.sidebar-toggle img {
+/* .sidebar-toggle img {
   width: 40px;
   height: 40px;
-}
+} */
 .sidebar-logo {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  left: 20px;
+  display: block;
 }
+.logo1 {
+  /* height: 300px;
+  margin-top: 250px; */
+}
+
 .sidebar {
   position: fixed;
   width: 345px;
@@ -197,14 +198,12 @@ a:active {
   margin-left: 10px;
 }
 /* slider section */
-.slider-wrapper .swiper-wrapper {
+.slider-swiper-wrapper {
   height: 100vh;
-  /* background-size: contain; */
-  background-repeat: no-repeat;
+  width: 100vw;
 }
-.slide {
-  background-image: url(/images/slider.png);
-  background-position: center center;
+.swiper-image-slide {
+  background-position: bottom;
   background-size: cover;
 }
 .primary-action {
@@ -282,7 +281,19 @@ a:active {
   font-weight: 400;
   line-height: normal;
 }
-
+.product-card {
+  max-width: 320px;
+}
+.product-card img {
+  width: 100%;
+}
+.product-image {
+  width: 235px;
+  height: 235px;
+}
+.product-image img {
+  width: 100%;
+}
 .product-slider {
   margin-top: 80px;
   width: 100%;
@@ -396,6 +407,13 @@ a:active {
 .details {
   margin-top: 55px;
 }
+.testimonies-img {
+  width: 860px;
+  margin: 0 auto;
+}
+.testimonies-img img {
+  width: 100%;
+}
 
 .person-name {
   color: var(--clr-secondary-1);
@@ -428,6 +446,13 @@ a:active {
 /* subscribe section */
 .subscribe-section {
   margin-top: 135px;
+}
+.subscribe-image {
+  width: 640px;
+}
+.subscribe-image img {
+  width: 100%;
+  height: 100%;
 }
 .subscribe-wrapper {
   display: grid;
@@ -559,6 +584,9 @@ a:active {
   max-width: 445px;
   margin: 0 auto;
 }
+.footer-nav img {
+  width: 100%;
+}
 
 /* product page styling */
 
@@ -613,43 +641,75 @@ a:active {
 }
 /* product card */
 .leaf {
+  position: absolute;
   right: 0;
-  top: -219px;
+  top: -235px;
   width: 320px;
   z-index: -1;
   height: 320px;
 }
-.img-position {
+.leaf-node {
+  z-index: -1;
+  left: 160px;
+  width: 536px;
+  top: 650px;
   position: absolute;
 }
+.img-position {
+  position: relative;
+}
+
 .product-card-section {
   margin-top: 30px;
-  position: relative;
+  padding-bottom: 115px;
 }
 .product-card-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 35px;
+  max-width: 1000px;
+  margin: auto;
 }
-.product-details-card {
-  /* max-width: 305px; */
-  background: var(--clr-white);
-}
+
 .product-card-image {
-  /* width: 297px; */
-  /* height: 345px; */
+  position: relative;
+  padding-top: 88%;
+  box-shadow: 0px 0px 8px 7px rgba(0, 0, 0, 0.1) inset;
+  background-color: rgb(211 211 211 / 50%);
+  max-height: 345px;
+  height: 100%;
 }
 
 .product-card-image img {
+  max-height: 345px;
+  position: absolute;
+  inset: 0;
+  /* margin: auto; */
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .product-details-card {
+  position: relative;
   border: 4px solid var(--clr-secondary-1);
+  background: var(--clr-white);
+  height: 475px;
 }
+.product-hover {
+  position: absolute;
+  z-index: 1;
+  background: rgba(210, 154, 90, 0.8);
+  box-shadow: 0px 0px 8px 7px rgba(0, 0, 0, 0.1) inset;
+  top: 0;
+  height: 347px;
+  width: 100%;
+  opacity: 0;
+}
+.product-details-card:hover .product-hover {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
 .product-card-bottom {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   display: flex;
   min-height: 123px;
   justify-content: center;

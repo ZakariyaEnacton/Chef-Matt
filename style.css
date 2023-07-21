@@ -692,7 +692,7 @@ a:active {
 /* product card */
 .leaf {
   position: absolute;
-  right: 0;
+  right: 17%;
   top: -235px;
   width: 320px;
   z-index: -1;
@@ -857,7 +857,7 @@ a:active {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background: rgba(19, 15, 12, 0.95);
   /* opacity: 0; */
-  /* display: none; */
+  display: none;
 }
 .show-modal {
   animation: fadeIn 0.3s;
@@ -991,6 +991,7 @@ a:active {
   margin-top: 90px;
   text-transform: capitalize;
   display: flex;
+  gap: 35px;
 }
 .add-cart-title-wrapper {
   color: var(--clr-white);
@@ -999,4 +1000,65 @@ a:active {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.btn-wrapper {
+  background-color: var(--clr-white);
+  height: 25px;
+  width: 140px;
+  border-radius: 37px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-decrement {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+.btn-increament {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+.count {
+  color: var(--clr-black);
+  font-size: 1rem;
+  font-family: var(--ff-primary);
+}
+.cart-btn {
+  background: transparent;
+  border-radius: 37px;
+  border: none;
+  cursor: pointer;
+}
+.btn-action-wrapper {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.btn-action {
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+  color: var(--clr-white);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  width: 100%;
+  line-height: 24px; /* 133.333% */
+  border: 1px solid var(--clr-secondary-1);
+  background: var(--clr-secondary-1);
+  cursor: pointer;
+}
+.modal-bottom-image {
+  max-height: 110px;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

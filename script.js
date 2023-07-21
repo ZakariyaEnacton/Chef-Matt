@@ -1,9 +1,13 @@
 // variable
+// create variable for navbar
 const toggleBtn = document.querySelector(".sidebar-toggle");
 const sidebar = document.querySelector(".sidebar");
 const closeBtn = document.querySelector(".close-btn");
 const sidebarToggle = document.querySelector(".sidebar-center");
 
+// product page variables
+const view = document.querySelectorAll(".view-btn");
+const modal = document.querySelector(".modal-container");
 // events
 toggleBtn.addEventListener("click", function () {
   sidebarToggle.classList.add("hide-sidebar");
@@ -13,6 +17,15 @@ toggleBtn.addEventListener("click", function () {
 closeBtn.addEventListener("click", function () {
   sidebar.classList.remove("show-sidebar");
   sidebarToggle.classList.remove("hide-sidebar");
+});
+
+view.forEach(function (element) {
+  element.addEventListener("click", function (e) {
+    e.preventDefault();
+    const clickId = element.dataset.id;
+    // e.classList.add(".show-modal");
+    console.log(clickId);
+  });
 });
 
 // swiper funcrions

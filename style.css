@@ -890,7 +890,113 @@ a:active {
 .modal-content {
   max-height: 614px;
   max-width: 900px;
+  width: 100%;
   margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 .modal-image {
+  width: 325px;
+  height: 325px;
+}
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 325px;
+  border: 4px solid var(--clr-secondary-1);
+  object-fit: fill;
+}
+.product-share-title {
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.product-share-wrapper {
+  margin-top: 50px;
+}
+.share-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+.media-links {
+  display: block;
+  max-height: 30px;
+  height: 30px;
+  max-width: 30px;
+}
+.share-links a img {
+  width: 100%;
+  height: 100%;
+}
+.modal-product-title {
+  max-width: 535px;
+  border-bottom: 4px solid var(--clr-secondary-1);
+}
+.product-details {
+  width: 100%;
+}
+.modal-product-title h3 {
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+  font-size: 2.375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.modal-price-wrapper {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal-new-price {
+  color: var(--clr-secondary-1);
+  font-family: var(--ff-primary);
+  font-size: 1.625rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.modal-old-price {
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: line-through;
+}
+.product-description-wrapper {
+  margin-top: 30px;
+  text-transform: capitalize;
+}
+.product-description {
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.add-cart-wrapper {
+  margin-top: 90px;
+  text-transform: capitalize;
+  display: flex;
+}
+.add-cart-title-wrapper {
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }

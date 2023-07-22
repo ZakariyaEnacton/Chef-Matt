@@ -1,333 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>product</title>
 
     <!-- style -->
     <link rel="stylesheet" href="style.css" />
-</head>
+  </head>
 
-<body>
-    <div class="sidebar-center">
+  <body>
+    <!-- header -->
+    <header>
+      <div class="sidebar-center">
         <button class="sidebar-toggle">
-            <img src="/images/hamburger.png" alt="" />
+          <img src="/images/hamburger.png" alt="" />
         </button>
         <div class="sidebar-image">
-            <a href="#" class="sidebar-logo">
-                <img src="/images/logo.png" alt="logo" class="logo1" />
-            </a>
+          <a href="#" class="sidebar-logo">
+            <img src="/images/logo.png" alt="logo" class="logo1" />
+          </a>
         </div>
-    </div>
-    <aside class="sidebar">
+      </div>
+      <aside class="sidebar">
         <div class="sidebar-header-wrapper">
-            <div class="sidebar-header">
-                <button class="close-btn">
-                    <img src="/images/Close_round.png" alt="" />
-                </button>
-                <a href="#" class="sidebar-logo">
-                    <img src="/images/sidebar-logo-1 copy.png" alt="logo" class="logo" />
-                </a>
-            </div>
-            <!-- links -->
-            <ul class="links">
-                <li>
-                    <a href="index.html" class="active">home</a>
-                </li>
-                <li>
-                    <a href="product.html">products</a>
-                </li>
-                <li>
-                    <a href="#meetchefmatt">meet chef matt</a>
-                </li>
-                <li>
-                    <a href="#faq">faq</a>
-                </li>
-                <li>
-                    <a href="#contactwithus">contact with us</a>
-                </li>
-            </ul>
+          <div class="sidebar-header">
+            <button class="close-btn">
+              <img src="/images/Close_round.png" alt="" />
+            </button>
+            <a href="#" class="sidebar-logo">
+              <img
+                src="/images/sidebar-logo-1 copy.png"
+                alt="logo"
+                class="logo"
+              />
+            </a>
+          </div>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="index.html" class="active">home</a>
+            </li>
+            <li>
+              <a href="product.html">products</a>
+            </li>
+            <li>
+              <a href="#meetchefmatt">meet chef matt</a>
+            </li>
+            <li>
+              <a href="#faq">faq</a>
+            </li>
+            <li>
+              <a href="#contactwithus">contact with us</a>
+            </li>
+          </ul>
         </div>
         <!-- sidebar bottom -->
         <div class="sidebar-bottom">
-            <div class="sidebar-text">
-                <p>text support 24/7<span>070-7782-9137</span></p>
+          <div class="sidebar-text">
+            <p>text support 24/7<span>070-7782-9137</span></p>
+          </div>
+          <div class="bottom-nav-container">
+            <div class="cart-center">
+              <img src="images/Bag_alt.png" alt="cart" />
+              <p>cart</p>
             </div>
-            <div class="bottom-nav-container">
-                <div class="cart-center">
-                    <img src="images/Bag_alt.png" alt="cart" />
-                    <p>cart</p>
-                </div>
-                <div class="fav-center">
-                    <img src="images/Favorite.png" alt="favorite" />
-                    <p>whishlist</p>
-                </div>
+            <div class="fav-center">
+              <img src="images/Favorite.png" alt="favorite" />
+              <p>whishlist</p>
             </div>
+          </div>
         </div>
-    </aside>
+      </aside>
+    </header>
 
     <main>
-        <!-- hero section -->
-        <div class="page-banner">
-            <div class="page-container">
-                <div class="page-banner-image">
-                    <h1 class="page-title">CHEF MATT PRODUCTS</h1>
-                    <div class="title-border"></div>
-                </div>
-            </div>
+      <!-- hero section -->
+      <div class="page-banner">
+        <div class="page-container">
+          <div class="page-banner-image">
+            <h1 class="page-title">CHEF MATT PRODUCTS</h1>
+            <div class="title-border"></div>
+          </div>
         </div>
-        <!-- search field -->
-        <div class="search-field-section">
-            <div class="container">
-                <div class="search-field-wrapper">
-                    <form class="filter-form">
-                        <input type="text" placeholder="Search" class="input-field search" />
-                        <button class="btn search-btn">Search</button>
-                    </form>
-                    <!-- filter section -->
-                    <div class="filter-section">
-                        <div class="filter-section-wrapper">
-                            <div class="filter-opotion">
-                                <label for="">filter</label>
-                                <select name="filter" id="filter" class="filter">
-                                    <option value="option1">option1</option>
-                                    <option value="option2">option2</option>
-                                    <option value="option3">option3</option>
-                                    <option value="option4">option4</option>
-                                </select>
-                                <button class="drop-down"><img src="/images/Arrow_drop_down.png" alt="arrow"
-                                        class="down-arrow"></button>
-                            </div>
-                            <div class="verticle-line"></div>
-                            <!-- feature section -->
-                            <div class="feature-opotion">
-                                <label for="">feature</label>
-                                <select name="feature" id="feature" class="feature">
-                                    <option value="feature1">feature1</option>
-                                    <option value="feature2">feature2</option>
-                                    <option value="feature3">feature3</option>
-                                    <option value="feature4">feature4</option>
-                                </select>
-                                <button class="drop-down"><img src="/images/Arrow_drop_down.png" alt="arrow"
-                                        class="down-arrow"></button>
-                            </div>
-                            <div class="verticle-line"></div>
-                            <div class="grid-view-action">
-                                <a href=""><img src="/images/grid_view_icon.png" alt="gridIcon"
-                                        class="icon grid-icon"></a>
-                            </div>
-                            <div class="list-view-action">
-                                <a href=""><img src="/images/list_view_icon.png" alt="gridIcon"
-                                        class="icon list-icon"></a>
-                            </div>
-                        </div>
-                    </div>
+      </div>
+      <!-- search field -->
+      <div class="search-field-section">
+        <div class="container">
+          <div class="search-field-wrapper">
+            <form class="filter-form">
+              <input
+                type="text"
+                placeholder="Search"
+                class="input-field search"
+              />
+              <button class="btn search-btn">Search</button>
+            </form>
+            <!-- filter section -->
+            <div class="filter-section">
+              <div class="filter-section-wrapper">
+                <div class="filter-opotion">
+                  <label for="">filter</label>
+                  <select name="filter" id="filter" class="filter">
+                    <option value="option1">option1</option>
+                    <option value="option2">option2</option>
+                    <option value="option3">option3</option>
+                    <option value="option4">option4</option>
+                  </select>
+                  <button class="drop-down">
+                    <img
+                      src="/images/Arrow_drop_down.png"
+                      alt="arrow"
+                      class="down-arrow"
+                    />
+                  </button>
                 </div>
+                <div class="verticle-line"></div>
+                <!-- feature section -->
+                <div class="feature-opotion">
+                  <label for="">feature</label>
+                  <select name="feature" id="feature" class="feature">
+                    <option value="feature1">feature1</option>
+                    <option value="feature2">feature2</option>
+                    <option value="feature3">feature3</option>
+                    <option value="feature4">feature4</option>
+                  </select>
+                  <button class="drop-down">
+                    <img
+                      src="/images/Arrow_drop_down.png"
+                      alt="arrow"
+                      class="down-arrow"
+                    />
+                  </button>
+                </div>
+                <div class="verticle-line"></div>
+                <div class="grid-view-action">
+                  <a href=""
+                    ><img
+                      src="/images/grid_view_icon.png"
+                      alt="gridIcon"
+                      class="icon grid-icon"
+                  /></a>
+                </div>
+                <div class="list-view-action">
+                  <a href=""
+                    ><img
+                      src="/images/list_view_icon.png"
+                      alt="gridIcon"
+                      class="icon list-icon"
+                  /></a>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- product card section -->
-        <div class="product-card-section">
-            <div class="img-position">
-                <img src="images/leaf.png" alt="leaf" class="leaf">
-            </div>
-            <div class="img-position">
-                <img src="images/product-leaf.png" alt="leaf" class="leaf-node">
-            </div>
-            <div class="container">
-                <div class="product-card-wrapper">
-                    <!-- start card -->
-                    <div class="product-details-card">
-                        <div class="product-card-image">
-                            <img src="/images/img_18.png" alt="cardImage">
-                        </div>
-                        <div class="product-hover">
-                            <div class="fav-image">
-                                <a href=""><img src="/images/Favorite.png" alt="favicon" class="fav-icon"></a>
-                            </div>
-                            <div class="cart-image">
-                                <a href=""><img src="/images/cart.png" alt="cart" class="cart-icon"></a>
-                            </div>
-                            <div class="view-image">
-                                <a href="" class="view-btn" data-id="cinnamon-honey"><img src="/images/view.png"
-                                        alt="cart" class="view-icon"></a>
-                            </div>
-                        </div>
-                        <div class="product-card-bottom">
-                            <div class="product-card-bottom-wrapper">
-                                <div class="product-title">
-                                    <h3>CINNAMON HONEY</h3>
-                                </div>
-                                <div class="product-price">
-                                    <div class="old-price">
-                                        <h6>$12.00</h6>
-                                    </div>
-                                    <div class="new-price">
-                                        <h6>$9.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-
-                </div>
-            </div>
+      </div>
+      <!-- product card section -->
+      <div class="product-card-section">
+        <div class="img-position">
+          <img src="images/leaf.png" alt="leaf" class="leaf" />
         </div>
-        <!-- frame section -->
-        <div class="frame-image-section">
-            <div class="container">
-                <div class="frame-image-wrapper" style="background-image:  url(./images/Frame.png);">
-
-                </div>
-            </div>
+        <div class="img-position">
+          <img src="images/product-leaf.png" alt="leaf" class="leaf-node" />
         </div>
-        <!-- subscribe section -->
-        <div class="subscribe-section">
-            <div class="container">
-                <div class="subscribe-wrapper">
-                    <div class="subscribe-image">
-                        <img src="/images/Group 1.png" alt="">
-                    </div>
-                    <div class="subscribe-image">
-                        <img src="/images/Group 2.png" alt="">
-                    </div>
-                    <div class="subscribe-image">
-                        <img src="/images/Group 3.png" alt="">
-                    </div>
-                    <div class="subscribe-image">
-                        <img src="/images/Group 4.png" alt="">
-                    </div>
+        <div class="container">
+          <div class="product-card-wrapper">
+            <!-- start card -->
+            <div class="product-details-card">
+              <div class="product-card-image">
+                <img src="/images/img_18.png" alt="cardImage" />
+              </div>
+              <div class="product-hover">
+                <div class="fav-image">
+                  <a href=""
+                    ><img
+                      src="/images/Favorite.png"
+                      alt="favicon"
+                      class="fav-icon"
+                  /></a>
                 </div>
+                <div class="cart-image">
+                  <a href=""
+                    ><img src="/images/cart.png" alt="cart" class="cart-icon"
+                  /></a>
+                </div>
+                <div class="view-image">
+                  <a href="" class="view-btn" data-id="cinnamon-honey"
+                    ><img src="/images/view.png" alt="cart" class="view-icon"
+                  /></a>
+                </div>
+              </div>
+              <div class="product-card-bottom">
+                <div class="product-card-bottom-wrapper">
+                  <div class="product-title">
+                    <h3>CINNAMON HONEY</h3>
+                  </div>
+                  <div class="product-price">
+                    <div class="old-price">
+                      <h6>$12.00</h6>
+                    </div>
+                    <div class="new-price">
+                      <h6>$9.00</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- end of card -->
+          </div>
         </div>
-        <!-- promotion section -->
-        <div class="promotion-section">
-            <div class="container">
-                <div class="heading-wrapper">
-                    <div class="promotion-section-head ">
-                        <h3 class="promotion-title">
-                            SIGN UP SPECIAL PROMOTIONS
-                        </h3>
-                        <p class="promotion-desc">
-                            Get exclusive deals you won’t find anywhere else straight to your inbox!
-                        </p>
-                    </div>
-                    <div class="promotion-form">
-                        <input type="text" placeholder="Enter email address" class="input-field promotion">
-                        <button class="btn subscribe-btn">Subscribe</button>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <!-- frame section -->
+      <div class="frame-image-section">
+        <div class="container">
+          <div
+            class="frame-image-wrapper"
+            style="background-image: url(./images/Frame.png)"
+          ></div>
         </div>
-        <!-- modal -->
-        <div class="modal-container">
-            <!-- modal top -->
-            <div class="modal-top-image" style="background-image: url(/images/modal-top-img.png);">
-                <div class="btn-close">
-                    <button class="modal-btn">
-                        <img src="/images/Close_round.png" alt="">
-                    </button>
-                </div>
+      </div>
+      <!-- subscribe section -->
+      <div class="subscribe-section">
+        <div class="container">
+          <div class="subscribe-wrapper">
+            <div class="subscribe-image">
+              <img src="/images/Group 1.png" alt="" />
             </div>
-            <!-- modal details content -->
-            <div class="modal-content">
-                <div class="modal-image-view">
-                    <div class="modal-image">
-                        <img src="/images/img_18.png" alt="image">
-                    </div>
-                    <div class="product-share-wrapper">
-                        <p class="product-share-title">
-                            Share this product:
-                        </p>
-                        <div class="share-links">
-                            <a href="" class="media-links facebook"><img src="/images/facebook.png" alt=""></a>
-                            <a href="" class="media-links instagram"><img src="/images/instagram.png" alt=""></a>
-                            <a href="" class="media-links instagram"><img src="/images/twitter.png" alt=""></a>
-                            <a href="" class="media-links instagram"><img src="/images/pinterest icon.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <div class="modal-product-title">
-                        <h3>COCONUT OIL</h3>
-                    </div>
-                    <div class="modal-price-wrapper">
-                        <p class="modal-new-price">
-                            $15.00
-                        </p>
-                        <p class="modal-old-price">
-                            $20.00
-                        </p>
-                    </div>
-                    <div class="product-description-wrapper">
-                        <p class="product-description">Product Description</p>
-                    </div>
-                    <div class="add-cart-wrapper">
-                        <div class="add-cart-title-wrapper">
-                            <p class="add-cart-title">Quantity: </p>
-                        </div>
-                        <div class="btn-wrapper">
-                            <button class="cart-btn btn-decrement">-</button>
-                            <p class="count">1</p>
-                            <button class="cart-btn btn-increament">+</button>
-                        </div>
-                    </div>
-                    <div class="btn-action-wrapper">
-                        <button class="btn-action btn-add-to-cart">
-                            Add to cart
-                        </button>
-                        <button class="btn-action btn-add-to-wishlist">
-                            Add to wishlist
-                        </button>
-                    </div>
-                </div>
+            <div class="subscribe-image">
+              <img src="/images/Group 2.png" alt="" />
             </div>
-            <!-- modal bottom -->
-            <div class="modal-bottom-image" style="background-image: url(/images/modal-bottom-img.png);">
+            <div class="subscribe-image">
+              <img src="/images/Group 3.png" alt="" />
             </div>
+            <div class="subscribe-image">
+              <img src="/images/Group 4.png" alt="" />
+            </div>
+          </div>
         </div>
-
+      </div>
+      <!-- promotion section -->
+      <div class="promotion-section">
+        <div class="container">
+          <div class="heading-wrapper">
+            <div class="promotion-section-head">
+              <h3 class="promotion-title">SIGN UP SPECIAL PROMOTIONS</h3>
+              <p class="promotion-desc">
+                Get exclusive deals you won’t find anywhere else straight to
+                your inbox!
+              </p>
+            </div>
+            <div class="promotion-form">
+              <input
+                type="text"
+                placeholder="Enter email address"
+                class="input-field promotion"
+              />
+              <button class="btn subscribe-btn">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal -->
+      <div class="modal-container">
+        <!-- modal top -->
+        <div
+          class="modal-top-image"
+          style="background-image: url(/images/modal-top-img.png)"
+        >
+          <div class="btn-close">
+            <button class="modal-btn">
+              <img src="/images/Close_round.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <!-- modal details content -->
+        <div class="modal-content">
+          <div class="modal-image-view">
+            <div class="modal-image">
+              <img src="/images/img_18.png" alt="image" />
+            </div>
+            <div class="product-share-wrapper">
+              <p class="product-share-title">Share this product:</p>
+              <div class="share-links">
+                <a href="" class="media-links facebook"
+                  ><img src="/images/facebook.png" alt=""
+                /></a>
+                <a href="" class="media-links instagram"
+                  ><img src="/images/instagram.png" alt=""
+                /></a>
+                <a href="" class="media-links instagram"
+                  ><img src="/images/twitter.png" alt=""
+                /></a>
+                <a href="" class="media-links instagram"
+                  ><img src="/images/pinterest icon.png" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="modal-product-title">
+              <h3>COCONUT OIL</h3>
+            </div>
+            <div class="modal-price-wrapper">
+              <p class="modal-new-price">$15.00</p>
+              <p class="modal-old-price">$20.00</p>
+            </div>
+            <div class="product-description-wrapper">
+              <p class="product-description">Product Description</p>
+            </div>
+            <div class="add-cart-wrapper">
+              <div class="add-cart-title-wrapper">
+                <p class="add-cart-title">Quantity:</p>
+              </div>
+              <div class="btn-wrapper">
+                <button class="cart-btn btn-decrement">-</button>
+                <p class="count">1</p>
+                <button class="cart-btn btn-increament">+</button>
+              </div>
+            </div>
+            <div class="btn-action-wrapper">
+              <button class="btn-action btn-add-to-cart">Add to cart</button>
+              <button class="btn-action btn-add-to-wishlist">
+                Add to wishlist
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- modal bottom -->
+        <div
+          class="modal-bottom-image"
+          style="background-image: url(/images/modal-bottom-img.png)"
+        ></div>
+      </div>
     </main>
     <!-- footer -->
     <footer>
-        <div class="footer-section">
-            <div class="container">
-                <div class="footer-wrapper">
-                    <div class="footer-content">
-                        <img src="/images/shipping.png" alt="shipping">
-                        <div class="content">
-                            <div class="footer-title">FREE SHIPPING WORLDWIDE</div>
-                            <div class="desc">Guaranteed Delivery</div>
-                        </div>
-                    </div>
-                    <div class="footer-content">
-                        <img src="/images/service.png" alt="shipping">
-                        <div class="content">
-                            <div class="footer-title">24/7 CUSTOMER SERVICE</div>
-                            <div class="desc">Text Us 24/7 at 070-7782-9137</div>
-                        </div>
-                    </div>
-                    <div class="footer-content">
-                        <img src="/images/quality.png" alt="shipping">
-                        <div class="content">
-                            <p class="footer-title">QUALITY GUARANTEE!</p>
-                            <p class="desc">Send Within 30 Days</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-nav">
-                    <a href="#">
-                        <img src="/images/GroupFooter.png" alt="footerimage">
-                    </a>
-                </div>
+      <div class="footer-section">
+        <div class="container">
+          <div class="footer-wrapper">
+            <div class="footer-content">
+              <img src="/images/shipping.png" alt="shipping" />
+              <div class="content">
+                <div class="footer-title">FREE SHIPPING WORLDWIDE</div>
+                <div class="desc">Guaranteed Delivery</div>
+              </div>
             </div>
+            <div class="footer-content">
+              <img src="/images/service.png" alt="shipping" />
+              <div class="content">
+                <div class="footer-title">24/7 CUSTOMER SERVICE</div>
+                <div class="desc">Text Us 24/7 at 070-7782-9137</div>
+              </div>
+            </div>
+            <div class="footer-content">
+              <img src="/images/quality.png" alt="shipping" />
+              <div class="content">
+                <p class="footer-title">QUALITY GUARANTEE!</p>
+                <p class="desc">Send Within 30 Days</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <a href="#">
+              <img src="/images/GroupFooter.png" alt="footerimage" />
+            </a>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- script -->
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

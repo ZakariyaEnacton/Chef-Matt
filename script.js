@@ -1,10 +1,11 @@
 // create variable for navbar
+// alert("load");
+
 const toggleBtn = document.querySelector(".sidebar-toggle");
 const sidebar = document.querySelector(".sidebar");
 const closeBtn = document.querySelector(".close-btn");
 const sidebarToggle = document.querySelector(".sidebar-center");
-const links = document.querySelector(".links");
-const navLink = document.querySelectorAll(".nav-link");
+// const links = document.querySelectorAll(".nav-link");
 const option = document.querySelectorAll(".option");
 // product page variables
 const modal = document.querySelector(".modal-container");
@@ -17,11 +18,22 @@ const dropDown = document.querySelectorAll(".drop-down");
 const filter = document.querySelector(".filter-opt");
 const feature = document.querySelector(".feature-opt");
 
+function setNavigation() {
+  let current_location = location.pathname.split("/")[1];
+  if (current_location === "") return;
+  let menu_items = document.querySelector(".links").getElementsByTagName("a");
+  for (let i = 0, len = menu_items.length; i < len; i++) {
+    if (menu_items[i].getAttribute("href").indexOf(current_location) !== -1) {
+      menu_items[i].className = "nav-link active";
+    }
+  }
+}
+setNavigation();
+
 // swiper funcrions
 window.onload = () => {
   var swiper = new Swiper(".product-slider", {
     slidesPerView: 4,
-    // spaceBetween: 10,
 
     navigation: {
       nextEl: ".swiper-button-next",
@@ -58,11 +70,6 @@ closeBtn.addEventListener("click", function () {
   sidebarToggle.classList.remove("hide-sidebar");
 });
 
-links.addEventListener("click", function (e) {
-  e.preventDefault();
-  window.location.href = e.target;
-  links.classList.add("active");
-});
 // modal open
 view.forEach(function (event) {
   event.addEventListener("click", function (e) {

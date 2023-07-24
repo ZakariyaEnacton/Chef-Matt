@@ -9,36 +9,12 @@ const modal = document.querySelector(".modal-container");
 const cardWrapper = document.querySelector(".product-card-wrapper");
 const modalContainer = document.querySelector(".modal-container");
 const modalContentWrapper = document.querySelector(".modal-content-wrapper");
-
-// events
-
-window.addEventListener("DOMContentLoaded", function () {
-  // displayModal(modals);
-});
-
 const view = document.querySelectorAll(".view-btn");
-view.forEach(function (event) {
-  event.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    modalContainer.classList.add("show-modal");
-  });
-});
-
 const close = document.querySelector(".modal-btn");
-close.addEventListener("click", function () {
-  modalContainer.classList.remove("show-modal");
-});
-
-toggleBtn.addEventListener("click", function () {
-  sidebarToggle.classList.add("hide-sidebar");
-  sidebar.classList.add("show-sidebar");
-});
-
-closeBtn.addEventListener("click", function () {
-  sidebar.classList.remove("show-sidebar");
-  sidebarToggle.classList.remove("hide-sidebar");
-});
+const filterBtn = document.querySelector(".filter");
+const featureBtn = document.querySelector(".feature");
+const filter = document.querySelector(".filter-opt");
+const feature = document.querySelector(".feature-opt");
 
 // swiper funcrions
 window.onload = () => {
@@ -66,3 +42,38 @@ window.onload = () => {
     },
   });
 };
+
+// events
+
+//  toggle nav bar
+toggleBtn.addEventListener("click", function () {
+  sidebarToggle.classList.add("hide-sidebar");
+  sidebar.classList.add("show-sidebar");
+});
+
+// close navbar
+closeBtn.addEventListener("click", function () {
+  sidebar.classList.remove("show-sidebar");
+  sidebarToggle.classList.remove("hide-sidebar");
+});
+
+// modal open
+view.forEach(function (event) {
+  event.addEventListener("click", function (e) {
+    e.preventDefault();
+    modalContainer.classList.add("show-modal");
+  });
+});
+
+//  modal close
+close.addEventListener("click", function () {
+  modalContainer.classList.remove("show-modal");
+});
+
+filterBtn.addEventListener("click", function () {
+  filter.classList.toggle("show-filter-opt");
+});
+
+featureBtn.addEventListener("click", function () {
+  feature.classList.toggle("show-feature-opt");
+});

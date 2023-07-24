@@ -139,7 +139,7 @@ a {
   margin-top: 18px;
   margin-bottom: 26px;
 }
-a:active {
+.active {
   color: var(--clr-secondary-1);
 }
 .links a {
@@ -648,17 +648,83 @@ a:active {
 .filter-opotion {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.filter-opt {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  display: none;
+}
+.show-filter-opt {
+  display: block;
+  animation: all 0.3s ease-in-out;
+}
+.filter-opt li {
+  color: black;
+  padding: 5px 8px;
+  text-decoration: none;
+  display: block;
+  list-style-type: none;
+  background-color: rgb(47, 47, 47);
+  font-family: montserrat;
+  border: 0px solid white;
+  align-self: flex-start;
+}
+.filter-opt li a {
+  text-decoration: none;
+  color: white;
+  font-family: var(--ff-primary);
+}
+.filter-opt li:hover {
+  background-color: #0979ad;
+  color: white;
 }
 .feature-opotion {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.feature-opt {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  display: none;
+}
+.show-feature-opt {
+  display: block;
+  animation: all 0.3s ease-in-out;
+}
+.feature-opt li {
+  color: black;
+  padding: 5px 6px;
+  text-decoration: none;
+  display: block;
+  list-style-type: none;
+  background-color: rgb(47, 47, 47);
+  font-family: montserrat;
+  align-self: flex-start;
+}
+.feature-opt li a {
+  text-decoration: none;
+  color: white;
+  font-family: var(--ff-primary);
+}
+.feature-opt li:hover {
+  background-color: #0979ad;
+  color: white;
 }
 .drop-down {
   display: flex;
   background: transparent;
   justify-content: center;
+  align-items: center;
   border: none;
   cursor: pointer;
+  color: var(--clr-white);
+  text-transform: capitalize;
 }
 .down-arrow {
   width: 34px;
@@ -707,6 +773,7 @@ a:active {
 .product-card-section {
   margin-top: 30px;
   padding-bottom: 115px;
+  position: relative;
 }
 .product-card-wrapper {
   display: grid;
@@ -740,7 +807,7 @@ a:active {
 }
 .product-hover {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   background: rgba(210, 154, 90, 0.8);
   box-shadow: 0px 0px 8px 7px rgba(0, 0, 0, 0.1) inset;
   top: 0;

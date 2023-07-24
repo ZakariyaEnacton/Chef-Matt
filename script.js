@@ -3,8 +3,9 @@ const toggleBtn = document.querySelector(".sidebar-toggle");
 const sidebar = document.querySelector(".sidebar");
 const closeBtn = document.querySelector(".close-btn");
 const sidebarToggle = document.querySelector(".sidebar-center");
-const navLinks = document.querySelectorAll(".nav-link");
-
+const links = document.querySelector(".links");
+const navLink = document.querySelectorAll(".nav-link");
+const option = document.querySelectorAll(".option");
 // product page variables
 const modal = document.querySelector(".modal-container");
 const cardWrapper = document.querySelector(".product-card-wrapper");
@@ -12,8 +13,7 @@ const modalContainer = document.querySelector(".modal-container");
 const modalContentWrapper = document.querySelector(".modal-content-wrapper");
 const view = document.querySelectorAll(".view-btn");
 const close = document.querySelector(".modal-btn");
-const filterBtn = document.querySelector(".filter");
-const featureBtn = document.querySelector(".feature");
+const dropDown = document.querySelectorAll(".drop-down");
 const filter = document.querySelector(".filter-opt");
 const feature = document.querySelector(".feature-opt");
 
@@ -58,6 +58,11 @@ closeBtn.addEventListener("click", function () {
   sidebarToggle.classList.remove("hide-sidebar");
 });
 
+links.addEventListener("click", function (e) {
+  e.preventDefault();
+  window.location.href = e.target;
+  links.classList.add("active");
+});
 // modal open
 view.forEach(function (event) {
   event.addEventListener("click", function (e) {
@@ -71,10 +76,12 @@ close.addEventListener("click", function () {
   modalContainer.classList.remove("show-modal");
 });
 
-filterBtn.addEventListener("click", function () {
-  filter.classList.toggle("show-filter-opt");
-});
-
-featureBtn.addEventListener("click", function () {
-  feature.classList.toggle("show-feature-opt");
+dropDown.forEach(function (event) {
+  event.addEventListener("click", function (e) {
+    if (e.currentTarget.classList.contains("filter")) {
+      filter.classList.toggle("show-filter-opt");
+    } else {
+      feature.classList.toggle("show-feature-opt");
+    }
+  });
 });

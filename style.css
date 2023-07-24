@@ -150,6 +150,9 @@ a {
   padding-bottom: 26px;
   color: var(--clr-white);
 }
+.links a:hover {
+  color: var(--clr-secondary-1);
+}
 .sidebar-text {
   border-bottom: 2px solid var(--clr-white);
 }
@@ -645,6 +648,12 @@ a {
   font-size: 1.25rem;
 }
 
+.option {
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .filter-opotion {
   display: flex;
   align-items: center;
@@ -657,13 +666,17 @@ a {
   top: 30px;
   display: none;
 }
+.show-option {
+  display: block;
+  animation: all 0.3s ease-in-out;
+}
 .show-filter-opt {
   display: block;
   animation: all 0.3s ease-in-out;
 }
 .filter-opt li {
   color: black;
-  padding: 5px 8px;
+  padding: 10px 15px;
   text-decoration: none;
   display: block;
   list-style-type: none;
@@ -699,13 +712,14 @@ a {
 }
 .feature-opt li {
   color: black;
-  padding: 5px 6px;
+  padding: 10px 15px;
   text-decoration: none;
   display: block;
   list-style-type: none;
   background-color: rgb(47, 47, 47);
   font-family: montserrat;
   align-self: flex-start;
+  text-align: center;
 }
 .feature-opt li a {
   text-decoration: none;

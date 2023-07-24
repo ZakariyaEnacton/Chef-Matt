@@ -3,6 +3,7 @@ const toggleBtn = document.querySelector(".sidebar-toggle");
 const sidebar = document.querySelector(".sidebar");
 const closeBtn = document.querySelector(".close-btn");
 const sidebarToggle = document.querySelector(".sidebar-center");
+const navLinks = document.querySelectorAll(".nav-link");
 
 // product page variables
 const modal = document.querySelector(".modal-container");

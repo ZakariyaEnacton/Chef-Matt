@@ -644,12 +644,7 @@ a:active {
 .label {
   font-size: 1.25rem;
 }
-.filter {
-  display: none;
-}
-.feature {
-  display: none;
-}
+
 .filter-opotion {
   display: flex;
   align-items: center;
@@ -856,10 +851,16 @@ a:active {
   width: 100%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background: rgba(19, 15, 12, 0.95);
-  display: none;
+  /* display: none; */
+  transform: translate(-1000%);
 }
 .show-modal {
+  transform: translate(0);
   animation: fadeIn 0.3s;
+}
+
+.modal-wrapper {
+  height: 100%;
 }
 
 @keyframes fadeIn {

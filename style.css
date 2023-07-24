@@ -684,6 +684,7 @@ a {
   font-family: montserrat;
   border: 0px solid white;
   align-self: flex-start;
+  text-align: center;
 }
 .filter-opt li a {
   text-decoration: none;

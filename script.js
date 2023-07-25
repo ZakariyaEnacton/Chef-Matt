@@ -39,11 +39,6 @@ window.onload = () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    breakpoints: {
-      1024: {
-        slidesPerView: 3.5,
-      },
-    },
   });
   var swiper = new Swiper(".banner-slider", {
     spaceBetween: 30,

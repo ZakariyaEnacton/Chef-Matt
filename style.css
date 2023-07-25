@@ -1352,13 +1352,26 @@ product page styling
     max-width: 110px;
     max-height: 110px;
   }
+  .product-card {
+    max-width: 190px;
+  }
 }
 
-@media screen and(max-width:1024px) {
+@media screen and (max-width: 1024px) {
+  /* .container {
+    min-width: 768px;
+  } */
   .navigation {
     display: none;
   }
   .navigation {
     display: none;
+  }
+  .product-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px;
+    max-width: 1000px;
+    margin: auto;
   }
 }

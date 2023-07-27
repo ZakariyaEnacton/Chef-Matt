@@ -6,7 +6,6 @@ const sidebar = document.querySelector(".sidebar");
 const closeBtn = document.querySelector(".close-btn");
 const sidebarToggle = document.querySelector(".sidebar-center");
 // const links = document.querySelectorAll(".nav-link");
-const option = document.querySelectorAll(".option");
 // product page variables
 const modal = document.querySelector(".modal-container");
 const cardWrapper = document.querySelector(".product-card-wrapper");
@@ -14,9 +13,6 @@ const modalContainer = document.querySelector(".modal-container");
 const modalContentWrapper = document.querySelector(".modal-content-wrapper");
 const view = document.querySelectorAll(".view-btn");
 const close = document.querySelector(".modal-btn");
-const dropDown = document.querySelectorAll(".drop-down");
-const filter = document.querySelector(".filter-opt");
-const feature = document.querySelector(".feature-opt");
 
 function setNavigation() {
   let current_location = location.pathname.split("/")[1];
@@ -33,15 +29,22 @@ setNavigation();
 // swiper funcrions
 window.onload = () => {
   var swiper = new Swiper(".product-slider", {
-    slidesPerView: 4,
-
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
+      640: {
+        slidesPerView: 2.6,
+      },
+      768: {
+        slidesPerView: 3.15,
+      },
       1024: {
-        slidesPerView: 3.5,
+        slidesPerView: 3.7,
+      },
+      1280: {
+        slidesPerView: 4,
       },
     },
   });
@@ -88,12 +91,25 @@ close.addEventListener("click", function () {
   modalContainer.classList.remove("show-modal");
 });
 
-dropDown.forEach(function (event) {
-  event.addEventListener("click", function (e) {
-    if (e.currentTarget.classList.contains("filter")) {
-      filter.classList.toggle("show-filter-opt");
-    } else {
-      feature.classList.toggle("show-feature-opt");
+function showDropdown(id) {
+  const dropDown = document.querySelectorAll(".option");
+  for (var i = 0; i < dropDown.length; i++) {
+    const open = dropDown[i];
+    open.classList.remove("show-option");
+  }
+  document.getElementById(id).classList.add("show-option");
+}
+
+// close dropdown clicked outside
+window.onclick = function (event) {
+  if (!event.target.matches(".drop-down")) {
+    var dropdowns = document.querySelectorAll(".option");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show-option")) {
+        openDropdown.classList.remove("show-option");
+      }
     }
-  });
-});
+  }
+};

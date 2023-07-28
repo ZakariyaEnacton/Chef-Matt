@@ -51,10 +51,7 @@ body {
   font-size: 0.875rem;
   text-transform: uppercase;
 }
-header {
-  position: fixed;
-  z-index: 2;
-}
+
 main {
   position: relative;
   margin-left: 150px;
@@ -74,6 +71,7 @@ a {
   height: 100%;
   border-right: 8px solid var(--clr-secondary-1);
   background: rgba(19, 15, 12, 0.8);
+  z-index: 2;
 }
 .hide-sidebar {
   transform: translate(-100%);
@@ -105,14 +103,16 @@ a {
 }
 
 .sidebar {
+  position: fixed;
   width: 345px;
-  height: 100%;
+  height: 100vh;
   background: rgba(19, 15, 12, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transform: translate(-100%);
   transition: all 0.3s ease;
+  z-index: 2;
 }
 .show-sidebar {
   transform: translate(0);
@@ -492,49 +492,34 @@ a {
 .subscribe-section {
   margin-top: 135px;
 }
-.subscribe-image img {
-  width: 100%;
-  height: 100%;
-}
 .subscribe-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+.subscribe-image img {
+  width: 100%;
+  height: 100%;
+}
 
 /* promotion section */
+
 .promotion-wrapper {
   background-size: cover;
+  padding-top: 13%;
+  position: relative;
 }
-.promotion-title {
+.prom-title {
   color: var(--clr-white);
-  font-family: var(--ff-primary);
-  font-size: 2.375rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  max-width: 572px;
   border-bottom: 4px solid var(--clr-white);
 }
 
-.promotion-desc {
-  margin-top: 35px;
-  color: #fff;
-  font-family: var(--ff-primary);
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
 .promotion-section .heading-wrapper {
-  padding-top: 6.25rem;
-  margin-left: 1.0625rem;
-  height: 400px;
+  /* padding-top: 6.25rem; */
+  /* margin-left: 1.0625rem; */
+  /* height: 400px; */
   color: var(--clr-white);
 }
-.promotion-section .heading {
-  color: var(--clr-white);
-  border-bottom: 4px solid var(--clr-white);
-}
+
 .promotion-form {
   display: flex;
   margin-top: 40px;
@@ -1206,8 +1191,6 @@ product page styling
 @media screen and (max-width: 1440px) {
   .container {
     max-width: 1040px;
-    margin: 0 auto;
-    padding: 0 1rem;
   }
   .product-section .heading-wrapper::before {
     max-height: 300px;
@@ -1287,7 +1270,7 @@ product page styling
   }
 }
 
-@media screen and (max-width: 1280px) {
+/* @media screen and (max-width: 1280px) {
   .container {
     max-width: 920px;
   }
@@ -1452,4 +1435,4 @@ product page styling
   .banner-wrapper .swiper-pagination {
     margin-left: 0;
   }
-}
+} */

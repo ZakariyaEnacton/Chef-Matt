@@ -28,6 +28,13 @@ setNavigation();
 
 // swiper funcrions
 window.onload = () => {
+  var swiper = new Swiper(".slider-wrapper", {
+    slidesPerView: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
   var swiper = new Swiper(".product-slider", {
     navigation: {
       nextEl: ".swiper-button-next",
@@ -50,13 +57,6 @@ window.onload = () => {
   });
   var swiper = new Swiper(".banner-slider", {
     spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-  var swiper = new Swiper(".slider-swiper-container", {
-    slidesPerView: 1,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

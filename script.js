@@ -55,7 +55,7 @@ window.onload = () => {
       clickable: true,
     },
   });
-  var swiper = new Swiper(".slider-wrapper", {
+  var swiper = new Swiper(".slider-swiper-container", {
     slidesPerView: 1,
     pagination: {
       el: ".swiper-pagination",

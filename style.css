@@ -407,6 +407,10 @@ a {
 }
 
 /* testimonies section */
+.testimonies-section {
+  /* position: relative; */
+  margin-top: 125px;
+}
 .img-wrapper {
   /* width: 33.5rem; */
   height: 17rem;
@@ -437,10 +441,6 @@ a {
 .p5 {
   max-width: 8.75rem;
   max-height: 8.75rem;
-}
-.testimonies-section {
-  /* position: relative; */
-  margin-top: 125px;
 }
 .testimonies-details {
   margin-top: 55px;
@@ -473,6 +473,14 @@ a {
   font-weight: 400;
   line-height: normal;
 }
+.content::after {
+  content: "";
+  border-bottom: 4px solid var(--clr-secondary-1);
+  display: block;
+  width: 55px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
 .section-bottom {
   margin: 22px auto 0;
   width: 55px;
@@ -483,9 +491,6 @@ a {
 /* subscribe section */
 .subscribe-section {
   margin-top: 135px;
-}
-.subscribe-image {
-  width: 624px;
 }
 .subscribe-image img {
   width: 100%;

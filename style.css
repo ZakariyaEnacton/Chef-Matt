@@ -108,13 +108,16 @@ a {
   width: 345px;
   height: 100vh;
   background: rgba(19, 15, 12, 0.9);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   transform: translate(-100%);
   transition: all 0.3s ease;
   z-index: 2;
 }
+.sidebar-header-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .show-sidebar {
   transform: translate(0);
 }
@@ -248,18 +251,7 @@ a {
   border: 3px solid var(--clr-white);
   font-weight: 400;
   text-transform: capitalize;
-
-  /* 
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  background: transparent;
-  text-align: center;
-  font-style: normal;
-  line-height: 128%;
-  position: relative;
-  bottom: -43.75rem;
-  cursor: pointer; */
+  cursor: pointer;
 }
 
 /* product section */

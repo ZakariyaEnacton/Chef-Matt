@@ -500,6 +500,14 @@ a {
 .subscribe-section {
   margin-top: 135px;
 }
+
+.section-img {
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: auto;
+  margin-right: auto;
+}
 .section {
   max-width: 1280px;
   display: grid;
@@ -1043,12 +1051,8 @@ product page styling
   text-decoration: none;
 }
 .frame-img {
-  position: absolute;
-  bottom: -120px;
-  z-index: -1;
-  left: 0;
   width: 100%;
-  background-size: contain;
+  margin-top: -160px;
 }
 
 /* frame section */
@@ -1495,7 +1499,6 @@ product page styling
     max-width: 1000px;
     margin: auto;
   }
-
   .logo1 {
     max-width: 50px;
   }
@@ -1507,7 +1510,7 @@ product page styling
     display: none;
   }
   .page-title {
-    font-size: 4rem;
+    font-size: 2rem;
   }
   .title-border {
     width: 500px;

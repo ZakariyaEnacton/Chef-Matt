@@ -41,16 +41,23 @@ window.onload = () => {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
+      0: {
+        slidesPerView: 1.3,
+        spaceBetween: 10,
+      },
       640: {
-        slidesPerView: 2.6,
+        slidesPerView: 2.3,
       },
       768: {
-        slidesPerView: 3.15,
+        slidesPerView: 2.5,
       },
       1024: {
         slidesPerView: 3.7,
       },
       1280: {
+        slidesPerView: 4,
+      },
+      1440: {
         slidesPerView: 4,
       },
     },

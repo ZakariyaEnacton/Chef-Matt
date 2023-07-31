@@ -505,8 +505,10 @@ a {
   max-width: 1280px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+}
+.section-img img {
+  width: 100%;
 }
 .section {
   max-width: 1280px;

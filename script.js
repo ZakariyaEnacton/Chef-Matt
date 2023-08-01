@@ -7,9 +7,8 @@ const closeBtn = document.querySelector(".close-btn");
 const sidebarToggle = document.querySelector(".sidebar-center");
 // const links = document.querySelectorAll(".nav-link");
 // product page variables
-const modal = document.querySelector(".modal-container");
 const cardWrapper = document.querySelector(".product-card-wrapper");
-const modalContainer = document.querySelector(".modal-container");
+const popUp = document.querySelector(".modal");
 const modalContentWrapper = document.querySelector(".modal-content-wrapper");
 const view = document.querySelectorAll(".view-btn");
 const close = document.querySelector(".modal-btn");
@@ -89,13 +88,13 @@ closeBtn.addEventListener("click", function () {
 view.forEach(function (event) {
   event.addEventListener("click", function (e) {
     e.preventDefault();
-    modalContainer.classList.add("show-modal");
+    popUp.classList.add("show-modal");
   });
 });
 
 //  modal close
 close.addEventListener("click", function () {
-  modalContainer.classList.remove("show-modal");
+  popUp.classList.remove("show-modal");
 });
 
 function showDropdown(id) {

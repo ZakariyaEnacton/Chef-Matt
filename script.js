@@ -107,20 +107,36 @@ popUp.addEventListener("click", function (event) {
   }
 });
 
-// dropDown.forEach(function (btn) {
-//   btn.addEventListener('click', function (e) {
-
-//   })
-// })
-
-function showDropdown(id) {
-  const dropDown = document.querySelectorAll(".option");
-  for (var i = 0; i < dropDown.length; i++) {
-    const open = dropDown[i];
-    open.classList.remove("show-option");
-  }
-  document.getElementById(id).classList.add("show-option");
+function closeFilter() {
+  const openManus = document.querySelectorAll(".filter-opotion");
+  openManus.forEach(function (menus) {
+    menus.classList.remove("show-option");
+  });
 }
+dropDown.forEach(function (btn) {
+  btn.addEventListener("click", function (e) {
+    console.log(e.target);
+    const dropContent = btn.querySelector(".filter-opt");
+    console.log(dropContent);
+    shouldOpen = !dropContent.classList.contains("show-option");
+    e.preventDefault();
+
+    closeFilter();
+
+    if (shouldOpen) {
+      dropContent.classList.add("show-option");
+    }
+  });
+});
+
+// function showDropdown(id) {
+//   const dropDown = document.querySelectorAll(".option");
+//   for (var i = 0; i < dropDown.length; i++) {
+//     const open = dropDown[i];
+//     open.classList.remove("show-option");
+//   }
+//   document.getElementById(id).classList.add("show-option");
+// }
 
 // close dropdown clicked outside
 window.onclick = function (event) {

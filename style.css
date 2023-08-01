@@ -91,6 +91,7 @@ a {
   border: none;
   color: white;
   background: transparent;
+  transition: all 0.3s linear;
   cursor: pointer;
   padding: 2.375rem 0;
   width: 100%;
@@ -566,7 +567,7 @@ a {
   border: 1px solid #fff;
   background: rgba(255, 255, 255, 0.1);
 }
-.form-field .input-field:focus {
+.form-field.input-field:focus {
   border: 1px solid var(--clr-secondary-1);
   outline: none;
 }
@@ -788,6 +789,7 @@ product page styling
   position: absolute;
   z-index: 1;
   top: 30px;
+  width: 150px;
   display: none;
 }
 .show-option {

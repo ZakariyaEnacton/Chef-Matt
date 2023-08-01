@@ -12,6 +12,7 @@ const popUp = document.querySelector(".modal");
 const modalContentWrapper = document.querySelector(".modal-content-wrapper");
 const view = document.querySelectorAll(".view-btn");
 const close = document.querySelector(".modal-btn");
+const dropDown = document.querySelectorAll(".down-arrow");
 
 function setNavigation() {
   let current_location = location.pathname.split("/")[1];
@@ -89,13 +90,28 @@ view.forEach(function (event) {
   event.addEventListener("click", function (e) {
     e.preventDefault();
     popUp.classList.add("show-modal");
+    document.querySelector("body").style.overflow = "hidden";
   });
 });
 
 //  modal close
 close.addEventListener("click", function () {
   popUp.classList.remove("show-modal");
+  document.querySelector("body").style.overflow = "unset";
 });
+
+popUp.addEventListener("click", function (event) {
+  if (event.target === popUp) {
+    popUp.classList.remove("show-modal");
+    document.querySelector("body").style.overflow = "unset";
+  }
+});
+
+// dropDown.forEach(function (btn) {
+//   btn.addEventListener('click', function (e) {
+
+//   })
+// })
 
 function showDropdown(id) {
   const dropDown = document.querySelectorAll(".option");

@@ -12,7 +12,7 @@ const popUp = document.querySelector(".modal");
 const modalContentWrapper = document.querySelector(".modal-content-wrapper");
 const view = document.querySelectorAll(".view-btn");
 const close = document.querySelector(".modal-btn");
-const dropDown = document.querySelectorAll(".down-arrow");
+const dropDown = document.querySelectorAll(".drop-action");
 
 function setNavigation() {
   let current_location = location.pathname.split("/")[1];
@@ -108,17 +108,18 @@ popUp.addEventListener("click", function (event) {
 });
 
 function closeFilter() {
-  const openManus = document.querySelectorAll(".filter-opotion");
+  const openManus = document.querySelectorAll(".drop-menu");
   openManus.forEach(function (menus) {
     menus.classList.remove("show-option");
   });
 }
+
 dropDown.forEach(function (btn) {
   btn.addEventListener("click", function (e) {
-    console.log(e.target);
-    const dropContent = btn.querySelector(".filter-opt");
-    console.log(dropContent);
-    shouldOpen = !dropContent.classList.contains("show-option");
+    console.log(btn);
+    const dropContent = btn.querySelector(".drop-menu");
+    // console.log(dropContent);
+    const shouldOpen = !dropContent.classList.contains("show-option");
     e.preventDefault();
 
     closeFilter();
@@ -126,7 +127,15 @@ dropDown.forEach(function (btn) {
     if (shouldOpen) {
       dropContent.classList.add("show-option");
     }
+    e.stopPropagation();
   });
+});
+
+window.addEventListener("click", function (event) {
+  if (event.target != dropDown) {
+    // Moved the code here to its own function.
+    closeFilter();
+  }
 });
 
 // function showDropdown(id) {

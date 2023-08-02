@@ -763,12 +763,13 @@ product page styling
 .search-btn:hover {
   background-color: var(--clr-black);
 }
-.filter-section-wrapper {
+.filter-section {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   margin-top: 20px;
+  position: relative;
 }
+
 .label {
   font-size: 1.25rem;
 }
@@ -785,13 +786,21 @@ product page styling
   flex-direction: column;
   position: relative;
 }
-.filter-opt {
+.drop-menu {
   position: absolute;
   z-index: 1;
-  top: 30px;
   width: 150px;
   display: none;
 }
+#filter-menu {
+  top: 35px;
+  right: 165px;
+}
+#feature-menu {
+  right: 61px;
+  top: 35px;
+}
+
 .show-option {
   display: block;
   animation: all 0.3s ease-in-out;
@@ -800,7 +809,7 @@ product page styling
   display: block;
   animation: all 0.3s ease-in-out;
 }
-.filter-opt li {
+.drop-menu li {
   color: black;
   padding: 15px;
   text-decoration: none;
@@ -812,12 +821,12 @@ product page styling
   align-self: flex-start;
   text-align: center;
 }
-.filter-opt li a {
+.drop-menu li a {
   text-decoration: none;
   color: white;
   font-family: var(--ff-primary);
 }
-.filter-opt li:hover {
+.drop-menu li:hover {
   background-color: var(--clr-secondary-1);
   color: white;
 }
@@ -867,6 +876,14 @@ product page styling
   color: var(--clr-white);
   text-transform: capitalize;
   font-family: var(--ff-primary);
+}
+.drop-down::after {
+  content: "";
+  width: 25px;
+  display: block;
+  color: var(--clr-white);
+  border: 1px solid var(--clr-white);
+  transform: rotate(90deg);
 }
 .down-arrow {
   width: 34px;

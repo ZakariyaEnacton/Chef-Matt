@@ -567,7 +567,8 @@ a {
   border: 1px solid #fff;
   background: rgba(255, 255, 255, 0.1);
 }
-.form-field.input-field:focus {
+
+.promotion-input:focus {
   border: 1px solid var(--clr-secondary-1);
   outline: none;
 }
@@ -670,6 +671,9 @@ footer {
 .footer-icons a {
   width: 10%;
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 
@@ -1670,7 +1674,7 @@ product page styling
     display: none;
   }
   .title {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
   .section-description {
     font-size: 0.875rem;
@@ -1724,6 +1728,9 @@ product page styling
     gap: 10px;
   }
   .page-title {
+    font-size: 1.2rem;
+  }
+  .title {
     font-size: 1.2rem;
   }
 }

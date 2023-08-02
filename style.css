@@ -989,15 +989,21 @@ product page styling
   background: rgba(210, 154, 90, 0.8);
   box-shadow: 0px 0px 8px 7px rgba(0, 0, 0, 0.1) inset;
   top: 0;
-  height: 354px;
+  height: 100%;
   width: 100%;
   opacity: 0;
 }
 .product-hover a {
-  display: block;
+  display: flex;
+}
+.product-hover button {
+  background: transparent;
+  border: none;
 }
 .fav-image {
   position: relative;
+  top: 2%;
+  left: 2%;
 }
 
 .fav-icon {
@@ -1007,6 +1013,16 @@ product page styling
 }
 .cart-image {
   position: relative;
+  background: var(--clr-white);
+  max-width: 82px;
+  max-height: 46px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 64px;
+  margin: 0 auto;
+  top: 30%;
 }
 .cart-icon {
   position: absolute;
@@ -1016,6 +1032,16 @@ product page styling
 }
 .view-image {
   position: relative;
+  background: var(--clr-black);
+  max-width: 82px;
+  max-height: 46px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 64px;
+  margin: 0 auto;
+  top: 35%;
 }
 .view-icon {
   position: absolute;
@@ -1131,13 +1157,11 @@ product page styling
   padding-left: 150px;
   align-items: center;
   justify-content: center;
-  /* display: none; */
-  transform: translate(-1000%);
+  display: none;
   background-color: rgba(0, 0, 0, 0.5);
   /* animation name  in js  */
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
-  display: flex;
 }
 .modal-wrapper {
   position: relative;
@@ -1312,8 +1336,11 @@ product page styling
   height: 95%;
 }
 .show-modal {
-  transform: translate(0);
-  animation: fadeIn 0.3s ease-in-out;
+  /* transform: translate(0); */
+  display: flex;
+  /* animation: fadeIn 0.3s ease-in-out; */
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -1322,6 +1349,14 @@ product page styling
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 .modal-image img {
@@ -1474,9 +1509,7 @@ product page styling
   .product-card-image img {
     height: 100%;
   }
-  .product-hover {
-    height: 75%;
-  }
+
   .cart-icon {
     left: 6.25rem;
     top: 130px;
@@ -1594,9 +1627,7 @@ product page styling
   .banner-wrapper .swiper-pagination {
     margin-left: 0;
   }
-  .product-hover {
-    height: 76%;
-  }
+
   .cart-icon {
     left: 7.25rem;
   }

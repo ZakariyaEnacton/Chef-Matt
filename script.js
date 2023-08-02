@@ -87,23 +87,35 @@ closeBtn.addEventListener("click", function () {
 
 // modal open
 view.forEach(function (event) {
-  event.addEventListener("click", function (e) {
-    e.preventDefault();
-    popUp.classList.add("show-modal");
+  event.addEventListener("click", function () {
+    console.log("click");
+    // e.preventDefault();
+    // popUp.classList.add("show-modal");
+    popUp.style.animationName = ` fadeIn`;
+    popUp.style.display = `flex`;
     document.querySelector("body").style.overflow = "hidden";
   });
 });
 
 //  modal close
 close.addEventListener("click", function () {
-  popUp.classList.remove("show-modal");
+  // popUp.classList.remove("show-modal");
+  popUp.style.animationName = ` fadeOut`;
+  setTimeout(() => {
+    popUp.style.display = `none`;
+  }, 250);
+
   document.querySelector("body").style.overflow = "unset";
 });
 
 popUp.addEventListener("click", function (event) {
   if (event.target === popUp) {
-    popUp.classList.remove("show-modal");
-    document.querySelector("body").style.overflow = "unset";
+    // popUp.classList.remove("show-modal");
+    popUp.style.animationName = ` fadeOut`;
+    setTimeout(() => {
+      popUp.style.display = `none`;
+      document.querySelector("body").style.overflow = "unset";
+    }, 250);
   }
 });
 

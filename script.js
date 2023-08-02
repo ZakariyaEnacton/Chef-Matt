@@ -5,8 +5,6 @@ const toggleBtn = document.querySelector(".sidebar-toggle");
 const sidebar = document.querySelector(".sidebar");
 const closeBtn = document.querySelector(".close-btn");
 const sidebarToggle = document.querySelector(".sidebar-center");
-// const links = document.querySelectorAll(".nav-link");
-// product page variables
 const cardWrapper = document.querySelector(".product-card-wrapper");
 const popUp = document.querySelector(".modal");
 const modalContentWrapper = document.querySelector(".modal-content-wrapper");
@@ -89,8 +87,6 @@ closeBtn.addEventListener("click", function () {
 view.forEach(function (event) {
   event.addEventListener("click", function () {
     console.log("click");
-    // e.preventDefault();
-    // popUp.classList.add("show-modal");
     popUp.style.animationName = ` fadeIn`;
     popUp.style.display = `flex`;
     document.querySelector("body").style.overflow = "hidden";
@@ -99,7 +95,6 @@ view.forEach(function (event) {
 
 //  modal close
 close.addEventListener("click", function () {
-  // popUp.classList.remove("show-modal");
   popUp.style.animationName = ` fadeOut`;
   setTimeout(() => {
     popUp.style.display = `none`;
@@ -110,7 +105,6 @@ close.addEventListener("click", function () {
 
 popUp.addEventListener("click", function (event) {
   if (event.target === popUp) {
-    // popUp.classList.remove("show-modal");
     popUp.style.animationName = ` fadeOut`;
     setTimeout(() => {
       popUp.style.display = `none`;
@@ -130,7 +124,6 @@ dropDown.forEach(function (btn) {
   btn.addEventListener("click", function (e) {
     console.log(btn);
     const dropContent = btn.querySelector(".drop-menu");
-    // console.log(dropContent);
     const shouldOpen = !dropContent.classList.contains("show-option");
     e.preventDefault();
 
@@ -149,26 +142,3 @@ window.addEventListener("click", function (event) {
     closeFilter();
   }
 });
-
-// function showDropdown(id) {
-//   const dropDown = document.querySelectorAll(".option");
-//   for (var i = 0; i < dropDown.length; i++) {
-//     const open = dropDown[i];
-//     open.classList.remove("show-option");
-//   }
-//   document.getElementById(id).classList.add("show-option");
-// }
-
-// close dropdown clicked outside
-window.onclick = function (event) {
-  if (!event.target.matches(".drop-down")) {
-    var dropdowns = document.querySelectorAll(".option");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show-option")) {
-        openDropdown.classList.remove("show-option");
-      }
-    }
-  }
-};

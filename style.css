@@ -285,7 +285,12 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  border-bottom: 4px solid var(--clr-secondary-1);
+}
+
+.title::after {
+  content: "";
+  display: block;
+  border-bottom: solid var(--clr-secondary-1);
 }
 
 .section-description {
@@ -543,7 +548,13 @@ a {
 }
 .prom-title {
   color: var(--clr-white);
-  border-bottom: 4px solid var(--clr-white);
+  border-bottom: 0px solid var(--clr-white);
+}
+
+.prom-title::after {
+  content: "";
+  display: block;
+  border-bottom: solid var(--clr-white);
 }
 
 .promotion-section .heading-wrapper {
@@ -563,14 +574,17 @@ a {
   align-items: center;
   margin-right: 15px;
   color: var(--clr-white);
-  width: 515px;
   border: 1px solid #fff;
   background: rgba(255, 255, 255, 0.1);
+  width: 100%;
 }
 
 .promotion-input:focus {
   border: 1px solid var(--clr-secondary-1);
   outline: none;
+}
+.promotion-input {
+  max-width: 500px;
 }
 .promotion {
   width: 515px;
@@ -880,6 +894,7 @@ product page styling
   color: var(--clr-white);
   text-transform: capitalize;
   font-family: var(--ff-primary);
+  cursor: pointer;
 }
 .drop-down::after {
   content: "";
@@ -965,6 +980,8 @@ product page styling
   position: relative;
   border: 4px solid var(--clr-secondary-1);
   background: var(--clr-white);
+  display: flex;
+  flex-direction: column;
 }
 .product-hover {
   position: absolute;
@@ -1013,11 +1030,12 @@ product page styling
 }
 
 .product-card-bottom {
+  margin-top: auto;
   padding-bottom: 20px;
   display: flex;
-  height: 123px;
   justify-content: center;
   align-items: center;
+  padding-top: 0.5rem;
 }
 .product-card-bottom-wrapper {
   padding-top: auto;
@@ -1029,7 +1047,7 @@ product page styling
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: 110%;
   max-width: 260px;
   margin: auto;
 }
@@ -1140,6 +1158,7 @@ product page styling
   display: flex;
   gap: 40px;
   padding: 5%;
+  align-items: center;
 }
 .product-share-title {
   color: var(--clr-white);
@@ -1148,7 +1167,8 @@ product page styling
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-top: 50px;
+  margin-top: 30px;
+  text-transform: capitalize;
 }
 .social-icons {
   display: flex;
@@ -1158,15 +1178,11 @@ product page styling
   margin-top: 15px;
 }
 .product-details {
-  width: 68%;
+  max-width: 535px;
+  width: 100%;
 }
 .modal-product-title {
   color: var(--clr-white);
-  font-family: var(--ff-primary);
-  font-size: 2.375rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .modal-product-title::after {
   content: "";
@@ -1601,7 +1617,6 @@ product page styling
     margin-top: 10px;
   }
   .product-details {
-    width: 70%;
     margin: 10px auto;
   }
   .promotion-wrapper {
